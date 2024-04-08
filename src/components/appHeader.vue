@@ -8,36 +8,6 @@ export default {
     data() {
         return {
             state: state,
-            navElements: [
-                {
-                    name: 'Home',
-                    caret: true
-                },
-                {
-                    name: 'Celebrity',
-                    caret: true
-                },
-                {
-                    name: 'Movie',
-                    caret: true
-                },
-                {
-                    name: 'Page',
-                    caret: true
-                },
-                {
-                    name: 'Shop',
-                    caret: true
-                },
-                {
-                    name: 'Blog',
-                    caret: false
-                },
-                {
-                    name: 'Contact Us',
-                    caret: false
-                },
-            ]
         }
     }
 }
@@ -70,7 +40,7 @@ export default {
         </div>
         <div class="nav d-flex">
             <div class="caret d-flex">
-                <span v-for="element in navElements">
+                <span v-for="element in state.navElements">
                     {{ element.name }}
                     <i class="fa-solid fa-caret-down" v-if="element.caret"></i>
                 </span>
