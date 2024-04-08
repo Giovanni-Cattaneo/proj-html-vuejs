@@ -32,7 +32,25 @@ export default {
         <span>Login</span>
       </div>
     </div>
+    <div class="search d-flex">
+      <img src="./assets/cropped-logo.png" alt="">
+      <button>Search</button>
+    </div>
+    <div class="nav d-flex">
+      <div class="caret d-flex">
+        <span>Home <i class="fa-solid fa-caret-down"></i></span>
+        <span>Celebrity <i class="fa-solid fa-caret-down"></i></span>
+        <span>Movie <i class="fa-solid fa-caret-down"></i></span>
+        <span>Page <i class="fa-solid fa-caret-down"></i></span>
+        <span>Shop <i class="fa-solid fa-caret-down"></i></span>
+        <span>Blog</span>
+        <span>Contact Us</span>
+      </div>
+      <div class="shop">
+        <i class="fa-solid fa-basket-shopping"></i>
+      </div>
 
+    </div>
     <h1>{{ state.message }}</h1>
   </header>
   <!-- /#site_header -->
@@ -65,6 +83,28 @@ export default {
   & a {
     color: #13be13;
     text-decoration: none;
+  }
+}
+
+.search {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+
+  & button {
+    background-color: #13be13;
+    border: none;
+    padding: 1rem 1.3rem;
+  }
+
+}
+
+.nav {
+  justify-content: space-between;
+  align-items: center;
+
+  .caret {
+    gap: 0.8rem;
   }
 }
 </style>
