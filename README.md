@@ -6,4 +6,4 @@ Giorno 1
 Analisi del progetto con Penbot
 
 # 2 
-Abbozzo di una struttura iniziale, intelaiatura su cui costruire il progetto
+Abbozzo di una struttura iniziale, intelaiatura su cui costruire il progetto, usare box colorati se necessario

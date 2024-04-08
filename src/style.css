@@ -15,3 +15,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.d-flex {
+  display: flex;
+}
+
+body {
+  max-width: 1920px;
+  width: 75%;
+  margin: auto;
+}
