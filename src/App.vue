@@ -2,10 +2,14 @@
 
 import { state } from './state.js'
 import appHeader from "./components/appHeader.vue";
+import appMain from "./components/appMain.vue";
+import appCard from "./components/appCard.vue";
 
 export default {
   components: {
-    appHeader
+    appHeader,
+    appMain,
+    appCard,
   },
   data() {
     return {
@@ -43,6 +47,7 @@ export default {
           <button><i class="fa-solid fa-angles-right"></i></button>
         </div>
       </div>
+
     </div>
   </main>
   <!-- /#site_main -->
