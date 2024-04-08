@@ -7,7 +7,37 @@ export default {
     name: 'appHeader',
     data() {
         return {
-            state: state
+            state: state,
+            navElements: [
+                {
+                    name: 'Home',
+                    caret: true
+                },
+                {
+                    name: 'Celebrity',
+                    caret: true
+                },
+                {
+                    name: 'Movie',
+                    caret: true
+                },
+                {
+                    name: 'Page',
+                    caret: true
+                },
+                {
+                    name: 'Shop',
+                    caret: true
+                },
+                {
+                    name: 'Blog',
+                    caret: false
+                },
+                {
+                    name: 'Contact Us',
+                    caret: false
+                },
+            ]
         }
     }
 }
@@ -40,13 +70,10 @@ export default {
         </div>
         <div class="nav d-flex">
             <div class="caret d-flex">
-                <span>Home <i class="fa-solid fa-caret-down"></i></span>
-                <span>Celebrity <i class="fa-solid fa-caret-down"></i></span>
-                <span>Movie <i class="fa-solid fa-caret-down"></i></span>
-                <span>Page <i class="fa-solid fa-caret-down"></i></span>
-                <span>Shop <i class="fa-solid fa-caret-down"></i></span>
-                <span>Blog</span>
-                <span>Contact Us</span>
+                <span v-for="element in navElements">
+                    {{ element.name }}
+                    <i class="fa-solid fa-caret-down" v-if="element.caret"></i>
+                </span>
             </div>
             <div class="shop">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -108,6 +135,10 @@ export default {
 
     .caret {
         gap: 0.8rem;
+
+        .fa-caret-down {
+            padding-left: 0.1rem;
+        }
     }
 
     .shop {

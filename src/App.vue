@@ -21,7 +21,9 @@ export default {
   <!-- /#site_header -->
 
   <main id="site_main">
-
+    <div class="jumbotron">
+      <img src="." alt="">
+    </div>
   </main>
   <!-- /#site_main -->
 
