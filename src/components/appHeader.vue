@@ -81,7 +81,6 @@ export default {
             </div>
 
         </div>
-        <h1>{{ state.message }}</h1>
     </header>
     <!-- /#site_header -->
 
