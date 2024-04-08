@@ -47,7 +47,8 @@ export default {
         <span>Contact Us</span>
       </div>
       <div class="shop">
-        <i class="fa-solid fa-basket-shopping"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>0</span>
       </div>
 
     </div>
@@ -105,6 +106,25 @@ export default {
 
   .caret {
     gap: 0.8rem;
+  }
+
+  .shop {
+    position: relative;
+    padding: 0.5rem;
+
+    .fa-cart-shopping {
+      font-size: 1.5rem;
+    }
+
+    >span {
+      position: absolute;
+      top: 0;
+      font-size: 0.6rem;
+      background-color: #13be13;
+      border-radius: 50%;
+      padding: 0 0.3rem;
+      right: 0;
+    }
   }
 }
 </style>
