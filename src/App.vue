@@ -14,7 +14,7 @@ export default {
 <template>
 
   <header id="site_header">
-    <div class="icons-container d-flex">
+    <div class="login d-flex">
       <div class="notification d-flex">
         <i class="fa-regular fa-envelope"></i>
         <span>Supershit Top Movie</span>
@@ -50,7 +50,7 @@ export default {
 </template>
 
 <style scoped>
-.icons-container {
+.login {
   justify-content: space-between;
 
   .d-flex {
