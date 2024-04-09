@@ -94,6 +94,20 @@ export default {
             </div>
         </div>
 
+        <div class="new_movie_section">
+            <div class="new_movie_text d-flex">
+                <strong>Movie Playlist</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
+            </div>
+            <div class="category d-flex">
+                <span>All</span>
+                <span>Coming Soon</span>
+                <span>Latest Movie</span>
+                <span>Top Rating</span>
+                <span>Tv Series</span>
+            </div>
+        </div>
+
     </main>
 
 
@@ -241,8 +255,18 @@ export default {
         }
 
     }
+}
 
+.new_movie_section {
+    margin-top: 3rem;
 
+    .category {
+        margin-top: 1rem;
+        gap: 1.5rem;
 
+        >span:nth-child(1) {
+            color: #13be13;
+        }
+    }
 }
 </style>
