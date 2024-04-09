@@ -3,12 +3,14 @@
 import { state } from '../state.js'
 import appCard from "./appCard.vue";
 import appPlaylist from "./appPlaylist.vue"
+import newMoviesCard from './newMoviesCard.vue'
 
 
 export default {
     components: {
         appCard,
         appPlaylist,
+        newMoviesCard,
     },
     name: 'appMain',
     data() {
@@ -106,6 +108,7 @@ export default {
                 <span>Top Rating</span>
                 <span>Tv Series</span>
             </div>
+            <newMoviesCard />
         </div>
 
     </main>
