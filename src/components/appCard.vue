@@ -40,10 +40,6 @@ export default {
             ]
         }
     },
-
-    methods: {
-
-    }
 }
 </script>
 
@@ -132,8 +128,6 @@ export default {
 
     .activeCard {
         height: 600px;
-
-        & img {}
     }
 
 

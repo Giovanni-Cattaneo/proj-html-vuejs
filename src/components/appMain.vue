@@ -13,6 +13,15 @@ export default {
         return {
             state: state,
         }
+    },
+    methods: {
+        prev() {
+            console.log('prev')
+        },
+
+        next() {
+            console.log('next')
+        }
     }
 }
 </script>
@@ -38,8 +47,8 @@ export default {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
                 </div>
                 <div class="arrows d-flex">
-                    <button><i class="fa-solid fa-angles-left"></i></button>
-                    <button><i class="fa-solid fa-angles-right"></i></button>
+                    <button @click="prev()"><i class="fa-solid fa-angles-left"></i></button>
+                    <button @click="next()"><i class="fa-solid fa-angles-right"></i></button>
                 </div>
             </div>
             <appCard />
