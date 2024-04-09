@@ -48,13 +48,20 @@ export default {
         // inseriamo un metodo, al click di uno dei due btn diminuiamo o aumentiamo 
         // activeIndex, se corrisponde all'id di una delle card la classe activeCard 
         // si sposta su quella
+        prev() {
+            console.log('prev')
+        },
+        next() {
+            console.log('next')
+        }
     }
 }
 </script>
 
 <template>
     <div class="card_container d-flex">
-        <div class="card" :class="{ activeCard: card.active }" v-for="card in cards" :key="card.name">
+        <div class="card" :class="{ activeCard: card.active }" v-for="card in cards" :key="card.name"
+            @prevImage="prev()" @nextimage="next()">
             <img :src="card.img" alt="">
             <div class="card_detail">
                 <span class="card_rating"> <i class="fa-solid fa-star"></i> {{ card.rating }}</span>
