@@ -20,7 +20,7 @@ export default {
 <template>
     <main id="site_main">
         <div class="jumbotron d-flex">
-            <img src="../assets/slider.jpg" alt="">
+            <img src="../../public/assets/slider.jpg" alt="">
             <div class="jumbotron_message">
                 <p>Welcome to our Site</p>
                 <h1>Our special movies</h1>
@@ -42,7 +42,7 @@ export default {
                     <button><i class="fa-solid fa-angles-right"></i></button>
                 </div>
             </div>
-
+            <appCard />
         </div>
     </main>
 

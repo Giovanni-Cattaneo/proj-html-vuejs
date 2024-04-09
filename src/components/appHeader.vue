@@ -35,7 +35,7 @@ export default {
             </div>
         </div>
         <div class="search d-flex">
-            <img src="../assets/cropped-logo.png" alt="">
+            <img src="../../public/assets/cropped-logo.png" alt="">
             <button>Search</button>
         </div>
         <div class="nav d-flex">
