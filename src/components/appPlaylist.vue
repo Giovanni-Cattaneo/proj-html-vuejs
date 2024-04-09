@@ -97,7 +97,9 @@ export default {
             <img :src="movie.img" alt="">
             <div class="description d-flex">
                 <h4>{{ movie.name }}</h4>
-                <span>{{ movie.views }} Views</span>
+                <span><strong>{{ movie.views }} Views</strong></span>
+                <div class="d-flex"><span>{{ movie.published }}</span> <span>{{ movie.lentgh }}</span></div>
+
             </div>
         </div>
     </div>
@@ -116,9 +118,16 @@ export default {
     height: 86%;
     overflow-y: scroll;
     gap: 0.3rem;
+    padding: 0.4rem;
 }
 
 .description {
     flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0.2rem;
+
+    >.d-flex {
+        justify-content: space-between;
+    }
 }
 </style>

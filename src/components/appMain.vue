@@ -202,7 +202,7 @@ export default {
         }
 
         .playlist {
-            background-color: rgb(82, 82, 82);
+            background-color: #182028;
             height: 600px;
             width: 30%;
         }
