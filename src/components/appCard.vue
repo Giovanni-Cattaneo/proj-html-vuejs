@@ -8,9 +8,10 @@ export default {
     data() {
         return {
             state: state,
-            activeIndex: 1,
+            activeIndex: 2,
             cards: [
                 {
+                    id: 1,
                     name: 'Hurry Animate Blue Strack New Movie',
                     img: '../../public/assets/1.jpg',
                     category: 'Top Rating',
@@ -20,6 +21,7 @@ export default {
                     active: false
                 },
                 {
+                    id: 2,
                     name: 'Quisque Auctor Movie In Strack',
                     img: '../../public/assets/2.jpg',
                     category: 'Coming Soon',
@@ -29,6 +31,7 @@ export default {
                     active: true,
                 },
                 {
+                    id: 3,
                     name: 'New Movie Quinsque In Strack',
                     img: '../../public/assets/5.jpg',
                     category: 'Latest Movie',
@@ -40,6 +43,12 @@ export default {
             ]
         }
     },
+
+    methods: {
+        // inseriamo un metodo, al click di uno dei due btn diminuiamo o aumentiamo 
+        // activeIndex, se corrisponde all'id di una delle card la classe activeCard 
+        // si sposta su quella
+    }
 }
 </script>
 
