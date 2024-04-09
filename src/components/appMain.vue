@@ -173,7 +173,7 @@ export default {
             .watch {
                 position: absolute;
                 left: 0;
-                bottom: 5rem;
+                bottom: 1rem;
                 background-color: rgb(29, 29, 29);
                 padding: 0.5rem;
             }
