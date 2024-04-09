@@ -22,7 +22,7 @@ export default {
                     name: 'Quisque Auctor Movie In Strack',
                     img: '../../public/assets/1.jpg',
                     category: 'Coming Soon',
-                    details: 'Setails',
+                    details: 'Details',
                     views: 947,
                     rating: '4/10',
                     active: true,
@@ -31,7 +31,7 @@ export default {
                     name: 'New Movie Quinsque In Strack',
                     img: '../../public/assets/1.jpg',
                     category: 'Latest Movie',
-                    details: '',
+                    details: 'Details',
                     views: 721,
                     rating: '0/10',
                     active: false,
@@ -47,7 +47,11 @@ export default {
         <div class="card" v-for="card in cards" :key="card.name">
             <img :src="card.img" alt="">
             <div class="card_detail">
-                <span> <i class="fa-solid fa-star"></i>{{ movie.rating }}</span>
+                <span class="card_rating"> <i class="fa-solid fa-star"></i>{{ card.rating }}</span>
+                <h3 class="card_title">{{ card.name }}</h3>
+                <p class="card_category">Category: {{ card.category }}</p>
+                <span class="card_details">{{ card.details }}</span>
+                <span class="card_views">{{ card.views }} Views</span>
             </div>
         </div>
     </div>
@@ -64,7 +68,38 @@ export default {
         position: relative;
 
         .card_detail {
-            position: absolute;
+
+            .card_rating,
+            .card_title,
+            .card_category,
+            .card_details,
+            .card_views {
+                position: absolute;
+            }
+
+            .card_rating {
+                top: 0;
+                right: 0.3rem;
+            }
+
+            .card_title {
+                bottom: 4rem;
+                left: 2rem
+            }
+
+            .card_category {
+                bottom: 3rem;
+                left: 2rem;
+            }
+
+            .card_views,
+            .card_detail {
+                background-color: rgb(49, 49, 49);
+                padding: 0.3rem 0.5rem;
+                border-radius: 1rem;
+                bottom: 1rem;
+            }
+
         }
     }
 
