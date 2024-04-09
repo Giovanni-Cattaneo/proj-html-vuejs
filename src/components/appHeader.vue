@@ -16,7 +16,7 @@ export default {
 <template>
 
     <header id="site_header">
-        <div class="login d-flex">
+        <div class="top_header d-flex">
             <div class="notification d-flex">
                 <i class="fa-regular fa-envelope"></i>
                 <span>Supershit Top Movie</span>
@@ -31,7 +31,7 @@ export default {
             </div>
             <div class="login d-flex">
                 <i class="fa-solid fa-lock"></i>
-                <span>Login</span>
+                <a href="">Login</a>
             </div>
         </div>
         <div class="search d-flex">
@@ -57,7 +57,7 @@ export default {
 </template>
 
 <style scoped>
-.login {
+.top_header {
     justify-content: space-between;
 
     .d-flex {
@@ -72,6 +72,13 @@ export default {
     & a {
         color: #13be13;
         text-decoration: none;
+    }
+
+    .login {
+
+        & a {
+            color: inherit;
+        }
     }
 }
 
