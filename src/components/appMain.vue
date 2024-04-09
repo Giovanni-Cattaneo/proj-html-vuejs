@@ -62,18 +62,26 @@ export default {
             <div class="video_section d-flex">
                 <div class="video">
                     <div class="title_video">
-                        <img src="../../public/assets/channels4_profile.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing......</p>
-                        <div class="clock">
-                            <i class="fa-regular fa-clock"></i>
-                            <span>Guarda più tardi</span>
+                        <div class="channel">
+                            <img src="../../public/assets/channels4_profile.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing......</p>
                         </div>
-                        <div class="share">
-                            <i class="fa-solid fa-share"></i>
-                            <span>Condividi</span>
+
+                        <div class="clock">
+                            <div class="clock-container">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>Guarda più tardi</span>
+                            </div>
+                            <div class="share">
+                                <i class="fa-solid fa-share"></i>
+                                <span>Condividi</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="watch"></div>
+                    <div class="watch">
+                        <span>Guarda su</span> <i class="fa-brands fa-youtube"></i>
+                        <span>Youtube</span>
+                    </div>
                 </div>
                 <div class="playlist">a
                     <div class="playlist_heading">
@@ -157,10 +165,48 @@ export default {
         width: 96.5%;
 
         .video {
-
             width: 70%;
             height: 600px;
             background-color: black;
+            position: relative;
+
+            .watch {
+                position: absolute;
+                left: 0;
+                bottom: 5rem;
+                background-color: rgb(29, 29, 29);
+                padding: 0.5rem;
+            }
+
+            .title_video {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .channel {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .clock {
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: center;
+
+                    .clock-container,
+                    .share {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            }
+
+            & img {
+                width: 40px;
+                border-radius: 50%;
+
+            }
         }
 
         .playlist {
