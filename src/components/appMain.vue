@@ -53,6 +53,23 @@ export default {
             </div>
             <appCard />
         </div>
+
+        <div class="playlist_section">
+            <div class="new_movie_text d-flex">
+                <strong>Movie Playlist</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
+            </div>
+            <div class="video_section d-flex">
+                <div class="video">s
+                    <div class="title_video"></div>
+                    <div class="watch"></div>
+                </div>
+                <div class="playlist">a
+                    <div class="playlist_heading"></div>
+                    <div class="videos"></div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
@@ -106,12 +123,38 @@ export default {
 
         }
 
-        .new_movie_text {
-            width: 90%;
-            flex-direction: column;
-            border-left: 2.5px solid #13be13;
-            border-bottom: 0.1px solid darkgrey;
-            padding-left: 0.3rem;
+    }
+}
+
+.new_movie_text {
+    width: 90%;
+    flex-direction: column;
+    border-left: 2.5px solid #13be13;
+    border-bottom: 0.1px solid darkgrey;
+    padding-left: 0.3rem;
+}
+
+
+
+.playlist_section {
+    margin-top: 5rem;
+
+    .video_section {
+        margin-top: 2rem;
+        gap: 2rem;
+        width: 96.5%;
+
+        .video {
+
+            width: 70%;
+            height: 600px;
+            background-color: black;
+        }
+
+        .playlist {
+            background-color: grey;
+            height: 600px;
+            width: 30%;
         }
     }
 }
