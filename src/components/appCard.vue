@@ -67,14 +67,17 @@ export default {
     justify-content: center;
     align-items: center;
 
+
     .card {
         position: relative;
         border-radius: 10rem;
         height: 500px;
+        opacity: 0.33;
 
         & img {
             height: 100%;
             border-radius: 1rem;
+
         }
 
         .card_detail {
@@ -128,6 +131,7 @@ export default {
 
     .activeCard {
         height: 600px;
+        opacity: 1;
     }
 
 

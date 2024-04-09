@@ -60,12 +60,24 @@ export default {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
             </div>
             <div class="video_section d-flex">
-                <div class="video">s
-                    <div class="title_video"></div>
+                <div class="video">
+                    <div class="title_video">
+                        <img src="../../public/assets/channels4_profile.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing......</p>
+                        <div class="clock">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Guarda più tardi</span>
+                        </div>
+                        <div class="share">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Condividi</span>
+                        </div>
+                    </div>
                     <div class="watch"></div>
                 </div>
                 <div class="playlist">a
-                    <div class="playlist_heading"></div>
+                    <div class="playlist_heading">
+                    </div>
                     <div class="videos"></div>
                 </div>
             </div>
