@@ -111,6 +111,10 @@ export default {
     flex-wrap: wrap;
     gap: 1rem;
 
+    .fa-star {
+        color: #13be13;
+    }
+
 
     .card {
         position: relative;

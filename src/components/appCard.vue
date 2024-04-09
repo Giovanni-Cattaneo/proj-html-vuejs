@@ -83,6 +83,10 @@ export default {
     justify-content: center;
     align-items: center;
 
+    .fa-star {
+        color: #13be13;
+    }
+
 
     .card {
         position: relative;
