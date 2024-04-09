@@ -2,11 +2,13 @@
 
 import { state } from '../state.js'
 import appCard from "./appCard.vue";
+import appPlaylist from "./appPlaylist.vue"
 
 
 export default {
     components: {
-        appCard
+        appCard,
+        appPlaylist,
     },
     name: 'appMain',
     data() {
@@ -74,10 +76,8 @@ export default {
                         <span>Youtube</span>
                     </div>
                 </div>
-                <div class="playlist">a
-                    <div class="playlist_heading">
-                    </div>
-                    <div class="videos"></div>
+                <div class="playlist">
+                    <appPlaylist />
                 </div>
             </div>
         </div>
@@ -173,6 +173,7 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                padding: 0.5rem;
 
                 .channel {
                     display: flex;
@@ -201,7 +202,7 @@ export default {
         }
 
         .playlist {
-            background-color: grey;
+            background-color: rgb(82, 82, 82);
             height: 600px;
             width: 30%;
         }
