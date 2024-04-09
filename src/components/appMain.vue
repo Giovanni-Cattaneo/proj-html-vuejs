@@ -81,6 +81,19 @@ export default {
                 </div>
             </div>
         </div>
+
+        <div class="jumbotron down-jumbotron d-flex">
+            <img src="../../public/assets/coming-bg.jpg" alt="">
+            <div class="jumbotron_message down_message">
+                <h3>Coming Soon Movie</h3>
+                <h1>Max still</h1>
+                <div class="cast">
+                    <p>JON PLAYER <span>&</span> EMILY ROSE</p>
+                    <p>The countdown is finished</p>
+                </div>
+            </div>
+        </div>
+
     </main>
 
 
@@ -100,8 +113,8 @@ export default {
         position: absolute;
         width: 300px;
         text-align: center;
-        top: 5rem;
-        right: 10rem;
+        top: 10rem;
+        right: 15rem;
 
         & button {
             background-color: #13be13;
@@ -149,6 +162,7 @@ export default {
 
 .playlist_section {
     margin-top: 5rem;
+    margin-bottom: 3rem;
 
     .video_section {
         margin-top: 2rem;
@@ -207,5 +221,28 @@ export default {
             width: 30%;
         }
     }
+}
+
+.down-jumbotron {
+
+    .down_message {
+
+        & h3 {
+            color: #13be13;
+        }
+
+        .cast {
+            background-color: #182028;
+            padding: 0.3rem 0;
+
+            & span {
+                color: #13be13;
+            }
+        }
+
+    }
+
+
+
 }
 </style>
