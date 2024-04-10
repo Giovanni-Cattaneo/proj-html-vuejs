@@ -18,7 +18,8 @@ export default {
                     details: 'Details',
                     views: 381,
                     rating: '0/10',
-                    active: false
+                    active: false,
+                    release: 'April 14, 2020',
                 },
                 {
                     id: 2,
@@ -29,6 +30,7 @@ export default {
                     views: 947,
                     rating: '4/10',
                     active: true,
+                    release: 'April 14, 2020'
                 },
                 {
                     id: 3,
@@ -39,6 +41,7 @@ export default {
                     views: 721,
                     rating: '0/10',
                     active: false,
+                    release: 'April 14, 2020',
                 },
                 {
                     id: 4,
@@ -49,6 +52,7 @@ export default {
                     views: 721,
                     rating: '0/10',
                     active: false,
+                    release: 'April 14, 2020',
                 },
             ]
         }
@@ -64,6 +68,7 @@ export default {
                 <h3 class="card_title">{{ card.name }}</h3>
                 <span class="card_details">{{ card.details }}</span>
                 <span class="card_views">Share</span>
+                <span class="release">{{ card.release }}</span>
             </div>
         </div>
     </div>
@@ -76,7 +81,7 @@ export default {
 .card_container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .card {
@@ -85,6 +90,7 @@ export default {
 
     & img {
         height: 100%;
+        width: 100%;
     }
 
     .card_detail {
@@ -93,7 +99,8 @@ export default {
         .card_title,
         .card_category,
         .card_details,
-        .card_views {
+        .card_views,
+        .release {
             position: absolute;
         }
 
@@ -131,6 +138,19 @@ export default {
             padding-left: 1rem;
         }
 
+        .release {
+            display: none;
+            top: 1rem;
+            right: 0;
+            background-color: #13be13;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            padding: 0.3rem 0.5rem;
+        }
+
+        :hover .release {
+            display: block;
+        }
     }
 }
 

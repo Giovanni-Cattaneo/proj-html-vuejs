@@ -135,8 +135,13 @@ export default {
             </div>
         </div>
 
-        <div class="forum">
-            <p>ciao</p>
+        <div class="forum d-flex">
+            <div class="inputs d-flex">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <button type="button">Subscribe</button>
         </div>
 
     </main>
@@ -356,6 +361,39 @@ export default {
 }
 
 .forum {
-    background-image: url(../../public/assets.png)
+    margin-top: 3rem;
+    background-image: url(../../public/assets/form-bg-1.png);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    .inputs {
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5rem;
+
+        & input {
+            background-color: transparent;
+            border: 1px solid white;
+            padding: 1rem 2rem;
+            border-radius: 1.4rem;
+            color: white;
+        }
+
+        & input::placeholder {
+            color: rgb(216, 216, 216);
+        }
+    }
+
+    & button {
+        padding: 1rem;
+        border-radius: 1.4rem;
+        border: none;
+        background-color: #182028;
+    }
 }
 </style>

@@ -3,12 +3,14 @@
 import { state } from './state.js'
 import appHeader from "./components/appHeader.vue";
 import appMain from "./components/appMain.vue";
+import appFooter from './components/appFooter.vue';
 
 
 export default {
   components: {
     appHeader,
     appMain,
+    appFooter,
   },
   data() {
     return {
@@ -25,9 +27,7 @@ export default {
   <appMain />
   <!-- /#site_main -->
 
-  <footer id="site_footer">
-
-  </footer>
+  <appFooter />
   <!-- /#site_footer -->
 
 </template>
