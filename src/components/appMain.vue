@@ -36,6 +36,7 @@ export default {
                 <button>Read More</button>
             </div>
         </div>
+        <!-- first jumbotron -->
 
         <div class="card_section">
             <div class="new_movie d-flex">
@@ -50,6 +51,7 @@ export default {
             </div>
             <appCard />
         </div>
+        <!-- new movies card section -->
 
         <div class="playlist_section">
             <div class="new_movie_text d-flex">
@@ -63,6 +65,7 @@ export default {
                             <img src="../../public/assets/channels4_profile.jpg" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing......</p>
                         </div>
+                        <!-- left-side video part -->
 
                         <div class="clock">
                             <div class="clock-container">
@@ -82,9 +85,11 @@ export default {
                 </div>
                 <div class="playlist">
                     <appPlaylist />
+                    <!-- right side playlist part -->
                 </div>
             </div>
         </div>
+        <!-- youtube playlist of trailer section -->
 
         <div class="jumbotron down-jumbotron d-flex">
             <img src="../../public/assets/coming-bg.jpg" alt="">
@@ -97,10 +102,11 @@ export default {
                 </div>
             </div>
         </div>
+        <!-- second jumbtron bottom -->
 
         <div class="new_movie_section">
             <div class="new_movie_text d-flex">
-                <strong>Movie Playlist</strong>
+                <strong>New movie</strong>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
             </div>
             <div class="category d-flex">
@@ -111,6 +117,7 @@ export default {
                 <span>Tv Series</span>
             </div>
             <newMoviesCard />
+            <!-- new movies card, possibly sorted by category -->
         </div>
 
 
@@ -120,7 +127,7 @@ export default {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
             </div>
 
-            <div class="news_card">
+            <div class="news_card d-flex">
                 <div class="main_card">
                     <img src="../../public/assets/blog-570x570.jpg" alt="">
                     <div class="card_detail">
@@ -129,8 +136,11 @@ export default {
                         <span class="comments">moviestar <strong>0 Comment Share</strong></span>
                     </div>
                 </div>
+                <!-- single big card, no component -->
                 <div class="small_cards">
                     <latestNewscard />
+
+                    <!-- component for group of 4 card -->
                 </div>
             </div>
         </div>
@@ -142,6 +152,8 @@ export default {
                 <input type="text" placeholder="Email Address">
             </div>
             <button type="button">Subscribe</button>
+
+            <!-- forum and subscribe section -->
         </div>
 
     </main>
@@ -315,8 +327,7 @@ export default {
 
     .news_card {
         padding-top: 3rem;
-        display: flex;
-        gap: 1rem;
+        flex-wrap: wrap;
     }
 
 

@@ -34,13 +34,17 @@ export default {
                 <a href="">Login</a>
             </div>
         </div>
+        <!-- high part of header, newsletter, social and login -->
+
         <div class="search d-flex">
             <img src="../../public/assets/cropped-logo.png" alt="">
             <button>Search</button>
         </div>
+        <!-- middle part of header syte icon and search -->
+
         <div class="nav d-flex">
             <div class="caret d-flex">
-                <span class="cycle_element" v-for="element in state.navElements">
+                <div class="cycle_element" v-for="element in state.navElements">
                     {{ element.name }}
                     <i class="fa-solid fa-caret-down" v-if="element.caret"></i>
                     <div class="menu">
@@ -51,13 +55,13 @@ export default {
                         <p>Home 5</p>
                         <p>Home 6</p>
                     </div>
-                </span>
-
+                </div>
             </div>
             <div class="shop">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>0</span>
             </div>
+            <!-- bottom part of header menu list and cart -->
 
         </div>
     </header>
