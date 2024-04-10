@@ -109,7 +109,7 @@ export default {
 </template>
 
 <style scoped>
-.fa:hover {
+.fa-facebook-f:hover {
     background-color: transparent;
     color: #13be13;
     border: none;
