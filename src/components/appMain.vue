@@ -38,19 +38,19 @@ export default {
         </div>
         <!-- first jumbotron -->
 
-        <div class="card_section">
+        <!-- <div class="card_section">
             <div class="new_movie d-flex">
                 <div class="new_movie_text d-flex">
                     <strong>New Movie</strong>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
                 </div>
                 <div class="arrows d-flex">
-                    <button @click="$emit('prevImage')"><i class="fa-solid fa-angles-left"></i></button>
-                    <button @click="$emit('nextImage')"><i class="fa-solid fa-angles-right"></i></button>
+                    <button @click="prevImage()"><i class="fa-solid fa-angles-left"></i></button>
+                    <button @click="nextImage()"><i class="fa-solid fa-angles-right"></i></button>
                 </div>
-            </div>
-            <appCard />
-        </div>
+            </div> -->
+        <appCard />
+        <!-- </div> -->
         <!-- new movies card section -->
 
         <div class="playlist_section">

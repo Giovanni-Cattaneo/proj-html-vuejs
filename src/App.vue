@@ -65,7 +65,7 @@ export default {
     <div class="terms d-flex">
       <span>Term And Condition</span>
       <span>Policy</span>
-      <Span>About</Span>
+      <span>About</span>
     </div>
     <div class="rights">
       <p>&copy; 2020 <span>@Themepul</span> ALL Rights Reserved.</p>

@@ -45,23 +45,55 @@ export default {
     },
 
     methods: {
-        // inseriamo un metodo, al click di uno dei due btn diminuiamo o aumentiamo 
-        // activeIndex, se corrisponde all'id di una delle card la classe activeCard 
-        // si sposta su quella
-        prev() {
+        prevImage() {
             console.log('prev')
+            this.activeIndex--
+            if (this.activeIndex < 0) {
+                this.activeIndex = this.cards.length - 1
+            }
+            this.updateActiveCard()
         },
-        next() {
+        nextImage() {
             console.log('next')
+            this.activeIndex++
+            if (this.activeIndex >= this.cards.length) {
+                this.activeIndex = 0
+            }
+            this.updateActiveCard()
+        },
+        updateActiveCard() {
+            for (let i = 0; i < this.cards.length; i++) {
+                if (this.cards[i].id === this.activeIndex + 1) {
+                    this.cards[i].active = true
+                } else {
+                    this.cards[i].active = false
+                }
+            }
         }
     }
+    // inseriamo un metodo, al click di uno dei due btn diminuiamo o aumentiamo 
+    // activeIndex, se corrisponde all'id di una delle card la classe activeCard 
+    // si sposta su quella
+
 }
 </script>
 
 <template>
+    <div class="card_section">
+        <div class="new_movie d-flex">
+            <div class="new_movie_text d-flex">
+                <strong>New Movie</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
+            </div>
+            <div class="arrows d-flex">
+                <button @click="prevImage()"><i class="fa-solid fa-angles-left"></i></button>
+                <button @click="nextImage()"><i class="fa-solid fa-angles-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- new movies card section -->
     <div class="card_container d-flex">
-        <div class="card" :class="{ activeCard: card.active }" v-for="card in cards" :key="card.name"
-            @prevImage="prev()" @nextimage="next()">
+        <div class="card" :class="{ activeCard: card.active }" v-for="card in cards" :key="card.name">
             <img :src="card.img" alt="">
             <div class="card_detail">
                 <span class="card_rating"> <i class="fa-solid fa-star"></i> {{ card.rating }}</span>
@@ -78,6 +110,40 @@ export default {
 </template>
 
 <style scoped>
+.card_section {
+    margin-top: 3rem;
+
+    .new_movie {
+        width: 100%;
+        justify-content: space-between;
+
+        .arrows {
+            align-items: center;
+            gap: 1rem;
+
+            & button {
+                color: #13be13;
+                background-color: black;
+                border-radius: 50%;
+                border: none;
+                font-size: 1.4rem;
+                border: 1px solid white;
+                padding: 0.2rem 0.3rem;
+            }
+
+        }
+
+    }
+}
+
+.new_movie_text {
+    width: 90%;
+    flex-direction: column;
+    border-left: 2.5px solid #13be13;
+    border-bottom: 0.1px solid darkgrey;
+    padding-left: 0.3rem;
+}
+
 .card_container {
     padding-top: 3rem;
     justify-content: center;
