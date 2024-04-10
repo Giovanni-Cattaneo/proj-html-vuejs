@@ -61,11 +61,9 @@ export default {
         <div class="card" v-for="card in cards" :key="card.name" @prevImage="prev()" @nextimage="next()">
             <img :src="card.img" alt="">
             <div class="card_detail">
-                <span class="card_rating"> <i class="fa-solid fa-star"></i> {{ card.rating }}</span>
                 <h3 class="card_title">{{ card.name }}</h3>
-                <p class="card_category">Category: {{ card.category }}</p>
                 <span class="card_details">{{ card.details }}</span>
-                <span class="card_views">{{ card.views }} Views</span>
+                <span class="card_views">Share</span>
             </div>
         </div>
     </div>
@@ -114,7 +112,6 @@ export default {
             left: 2rem;
         }
 
-        .card_views,
         .card_details {
             background-color: rgb(29, 29, 29);
             padding: 0.3rem 0.5rem;
@@ -123,9 +120,8 @@ export default {
 
         .card_views {
             right: 0;
-            border-top-left-radius: 1rem;
-            border-bottom-left-radius: 1rem;
             padding-right: 1rem;
+            bottom: 1rem;
         }
 
         .card_details {

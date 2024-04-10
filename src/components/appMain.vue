@@ -135,6 +135,10 @@ export default {
             </div>
         </div>
 
+        <div class="forum">
+            <p>ciao</p>
+        </div>
+
     </main>
 
 
@@ -303,6 +307,7 @@ export default {
     .news_card {
         padding-top: 3rem;
         display: flex;
+        gap: 1rem;
     }
 
 
@@ -312,13 +317,14 @@ export default {
 
         & img {
             opacity: 0.63;
+            height: 100%;
         }
 
         .card_detail {
             max-width: 570px;
 
             >strong {
-                font-size: 1.1rem;
+                font-size: 1.6rem;
                 position: absolute;
                 bottom: 8rem;
                 left: 3rem;
@@ -336,7 +342,7 @@ export default {
 
             .comments {
                 position: absolute;
-                right: 8rem;
+                right: 1rem;
                 bottom: 4rem;
 
 
@@ -347,5 +353,9 @@ export default {
     .small_cards {
         width: 50%;
     }
+}
+
+.forum {
+    background-image: url(../../public/assets.png)
 }
 </style>
