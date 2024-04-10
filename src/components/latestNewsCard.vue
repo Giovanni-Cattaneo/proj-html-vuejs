@@ -85,7 +85,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(19, 190, 19, 0.3) 0%, rgba(19, 190, 19, 0.7) 100%);
+    background: linear-gradient(to top, rgba(19, 190, 19, 0.3) 0%, rgba(19, 190, 19, 0.7) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
