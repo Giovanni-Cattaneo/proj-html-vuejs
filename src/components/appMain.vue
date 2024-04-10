@@ -165,6 +165,10 @@ export default {
         text-align: center;
         top: 10rem;
         right: 15rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
 
         & button {
             background-color: #13be13;
