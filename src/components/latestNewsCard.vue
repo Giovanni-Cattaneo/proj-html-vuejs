@@ -64,6 +64,7 @@ export default {
     <div class="card_container d-flex">
         <div class="card" v-for="card in cards" :key="card.name" @prevImage="prev()" @nextimage="next()">
             <img :src="card.img" alt="">
+            <div class="card_overlay"></div>
             <div class="card_detail">
                 <h3 class="card_title">{{ card.name }}</h3>
                 <span class="card_details">{{ card.details }}</span>
@@ -78,6 +79,38 @@ export default {
 </template>
 
 <style scoped>
+.card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(19, 190, 19, 0.3) 0%, rgba(19, 190, 19, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.card:hover .card_overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.release {
+    display: none;
+    top: 1rem;
+    right: 0;
+    background-color: #13be13;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.card:hover .release {
+    display: block;
+}
+
+
 .card_container {
     display: flex;
     flex-wrap: wrap;
@@ -138,19 +171,6 @@ export default {
             padding-left: 1rem;
         }
 
-        .release {
-            display: none;
-            top: 1rem;
-            right: 0;
-            background-color: #13be13;
-            border-top-left-radius: 1rem;
-            border-bottom-left-radius: 1rem;
-            padding: 0.3rem 0.5rem;
-        }
-
-        :hover .release {
-            display: block;
-        }
     }
 }
 
