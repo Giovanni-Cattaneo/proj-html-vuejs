@@ -20,6 +20,7 @@ export default {
                     active: true,
                     lentgh: '2.30.00',
                     published: 'February 12, 2016',
+                    genre: 'Drama, Action',
                 },
                 {
                     id: 2,
@@ -32,6 +33,7 @@ export default {
                     active: false,
                     lentgh: '2.30.00',
                     published: 'February 12, 2016',
+                    genre: 'Drama, Action',
                 },
                 {
                     id: 3,
@@ -44,6 +46,7 @@ export default {
                     active: false,
                     lentgh: '2.30.00',
                     published: 'February 12, 2016',
+                    genre: 'Drama, Action',
                 },
                 {
                     id: 4,
@@ -56,6 +59,7 @@ export default {
                     views: 721,
                     rating: '0/10',
                     active: false,
+                    genre: 'Drama, Action',
                 },
                 {
                     id: 5,
@@ -68,6 +72,7 @@ export default {
                     active: true,
                     lentgh: '2.30.00',
                     published: 'February 12, 2016',
+                    genre: 'Drama, Action',
                 },
                 {
                     id: 6,
@@ -80,6 +85,7 @@ export default {
                     active: false,
                     lentgh: '2.30.00',
                     published: 'February 12, 2016',
+                    genre: 'Drama, Action',
                 },
             ]
         }
@@ -100,6 +106,12 @@ export default {
                 <span class="card_views">{{ card.views }} Views</span>
                 <span class="play"><i class="fa-solid fa-play"></i></span>
                 <span class="card_length">{{ card.lentgh }}</span>
+                <div class="information_hover">
+                    <h3>{{ card.name }}</h3>
+                    <p>Category: {{ card.category }}</p>
+                    <p>Release: {{ card.published }}</p>
+                    <p>Genres: {{ card.genre }} </p>
+                </div>
             </div>
         </div>
     </div>
@@ -107,13 +119,20 @@ export default {
 </template>
 
 <style scoped>
+.information_hover {
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+    display: none;
+}
+
 .card_overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(19, 190, 19, 0.3) 0%, rgba(19, 190, 19, 0.7) 100%);
+    background: linear-gradient(to top, rgba(19, 190, 19, 0.3) 0%, rgba(19, 190, 19, 0.6) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -158,8 +177,14 @@ export default {
 
 .card:hover .card_length,
 .card:hover .play,
-.card:hover .release {
+.card:hover .release,
+.card:hover .information_hover {
     display: block;
+}
+
+.card:hover .card_title,
+.card:hover .card_category {
+    display: none;
 }
 
 .card_container {
