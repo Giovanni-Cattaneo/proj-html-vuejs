@@ -27,9 +27,17 @@ export default {
   <appMain />
   <!-- /#site_main -->
 
-  <appFooter />
+  <div id="site_footer">
+    <appFooter />
+  </div>
+
   <!-- /#site_footer -->
 
 </template>
 
-<style></style>
+<style>
+#site_footer {
+  position: relative;
+  width: 1920px;
+}
+</style>
