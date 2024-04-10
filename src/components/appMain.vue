@@ -111,6 +111,14 @@ export default {
             <newMoviesCard />
         </div>
 
+
+        <div class="latest_news">
+            <div class="new_movie_text d-flex">
+                <strong>Movie Playlist</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
+            </div>
+        </div>
+
     </main>
 
 
@@ -271,5 +279,9 @@ export default {
             color: #13be13;
         }
     }
+}
+
+.latest_news {
+    margin-top: 4rem;
 }
 </style>

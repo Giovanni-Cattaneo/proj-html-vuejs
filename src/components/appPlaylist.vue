@@ -119,6 +119,16 @@ export default {
     overflow-y: scroll;
     gap: 0.3rem;
     padding: 0.4rem;
+
+}
+
+.movie {
+    transition: background-color 300ms;
+    cursor: pointer;
+}
+
+.movie:hover {
+    background-color: darkgrey;
 }
 
 .description {
