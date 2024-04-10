@@ -96,6 +96,27 @@ export default {
 
     .icons {
         margin-left: 1rem;
+        gap: 0.65rem;
+
+        .fa-facebook-f {
+            color: rgb(46, 46, 240);
+        }
+
+        .fa-twitter {
+            color: #00b1e8;
+        }
+
+        .fa-linkedin-in {
+            color: #049c98;
+        }
+
+        .fa-instagram {
+            color: #bc3229;
+        }
+
+        .fa-google-plus-g {
+            color: #ab0c18;
+        }
     }
 
     & a {

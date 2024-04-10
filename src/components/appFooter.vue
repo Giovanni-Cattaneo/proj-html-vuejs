@@ -60,7 +60,13 @@ export default {
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ad quaerat, consequatur dignissimos
                     atque inventore aut illum, sed porro sunt explicabo blanditiis impedit accusantium, itaque et enim
                     aliquam maiores voluptas?</p>
-                <div class="icons"></div>
+                <div class="icons d-flex">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-google-plus-g"></i>
+                </div>
             </div>
             <div class="movie_category d-flex">
                 <h4>Movie Category</h4>
@@ -96,16 +102,19 @@ export default {
                         <strong>{{ card.name }}</strong>
                         <p>{{ card.published }}</p>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
-
 </template>
 
 <style scoped>
+.fa:hover {
+    background-color: transparent;
+    color: #13be13;
+    border: none;
+}
+
 .container::before {
     content: "";
     max-width: 1920px;
@@ -115,7 +124,6 @@ export default {
     background-position: center;
     position: absolute;
     margin: 0 -300px;
-    height: 500px;
     top: 0;
     left: 0;
     width: 100%;
@@ -125,11 +133,11 @@ export default {
 }
 
 .container {
-    height: 500px;
+    margin-top: 3rem;
 
     .footer_container {
         display: flex;
-        padding-top: 4rem;
+        padding: 4rem 0;
         gap: 1.5rem;
 
         & h4 {
@@ -159,6 +167,40 @@ export default {
             padding-left: 0.5rem;
             justify-content: flex-end;
             gap: 1rem;
+        }
+
+        .icons {
+            gap: 1rem;
+
+            & i {
+                background-color: transparent;
+                border: 0.1px solid white;
+                border-radius: 50%;
+                padding: 0.6rem;
+                font-size: 1.3rem;
+                line-height: 1.1rem;
+            }
+
+            .fa-facebook-f {
+                background-color: rgb(46, 46, 240);
+            }
+
+            .fa-twitter {
+                background-color: #00b1e8;
+            }
+
+            .fa-linkedin-in {
+                background-color: #049c98;
+            }
+
+            .fa-instagram {
+                background-color: #bc3229;
+            }
+
+            .fa-google-plus-g {
+                padding: 0.5rem 0.4rem;
+                background-color: #ab0c18;
+            }
         }
 
 

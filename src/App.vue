@@ -31,6 +31,17 @@ export default {
     <appFooter />
   </div>
 
+  <div class="copyright d-flex">
+    <div class="terms d-flex">
+      <span>Term And Condition</span>
+      <span>Policy</span>
+      <Span>About</Span>
+    </div>
+    <div class="rights">
+      <p>&copy; 2020 <span>@Themepul</span> ALL Rights Reserved.</p>
+    </div>
+  </div>
+
   <!-- /#site_footer -->
 
 </template>
@@ -39,5 +50,21 @@ export default {
 #site_footer {
   position: relative;
   width: 1920px;
+}
+
+.copyright {
+  justify-content: space-between;
+  padding: 1rem;
+
+  .terms {
+    gap: 1.5rem;
+  }
+
+  .rights {
+
+    & span {
+      color: #13be13;
+    }
+  }
 }
 </style>
