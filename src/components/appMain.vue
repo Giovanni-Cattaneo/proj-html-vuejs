@@ -4,6 +4,7 @@ import { state } from '../state.js'
 import appCard from "./appCard.vue";
 import appPlaylist from "./appPlaylist.vue"
 import newMoviesCard from './newMoviesCard.vue'
+import latestNewscard from './latestNewsCard.vue'
 
 
 export default {
@@ -11,6 +12,7 @@ export default {
         appCard,
         appPlaylist,
         newMoviesCard,
+        latestNewscard,
     },
     name: 'appMain',
     data() {
@@ -114,8 +116,22 @@ export default {
 
         <div class="latest_news">
             <div class="new_movie_text d-flex">
-                <strong>Movie Playlist</strong>
+                <strong>Latest News</strong>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum!</p>
+            </div>
+
+            <div class="news_card">
+                <div class="main_card">
+                    <img src="../../public/assets/blog-570x570.jpg" alt="">
+                    <div class="card_detail">
+                        <strong>Actor The Concept Movie High Concept Theory See The Post</strong>
+                        <span class="details">Details</span>
+                        <span class="comments">moviestar <strong>0 Comment Share</strong></span>
+                    </div>
+                </div>
+                <div class="small_cards">
+                    <latestNewscard />
+                </div>
             </div>
         </div>
 
@@ -283,5 +299,53 @@ export default {
 
 .latest_news {
     margin-top: 4rem;
+
+    .news_card {
+        padding-top: 3rem;
+        display: flex;
+    }
+
+
+    .main_card {
+        position: relative;
+        width: 50%;
+
+        & img {
+            opacity: 0.63;
+        }
+
+        .card_detail {
+            max-width: 570px;
+
+            >strong {
+                font-size: 1.1rem;
+                position: absolute;
+                bottom: 8rem;
+                left: 3rem;
+            }
+
+            .details {
+                position: absolute;
+                background-color: #182028;
+                padding: 0.3rem 0.5rem;
+                bottom: 4rem;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+
+            }
+
+            .comments {
+                position: absolute;
+                right: 8rem;
+                bottom: 4rem;
+
+
+            }
+        }
+    }
+
+    .small_cards {
+        width: 50%;
+    }
 }
 </style>
