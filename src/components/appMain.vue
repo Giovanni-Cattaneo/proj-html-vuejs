@@ -396,4 +396,8 @@ export default {
         background-color: #182028;
     }
 }
+
+.forum button:hover {
+    background-color: white;
+}
 </style>

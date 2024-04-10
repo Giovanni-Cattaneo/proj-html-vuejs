@@ -33,3 +33,7 @@ body {
   height: 10000px;
   background-color: #060f19;
 }
+
+button:hover {
+  color: #060f19;
+}
