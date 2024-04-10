@@ -61,7 +61,7 @@ export default {
                     atque inventore aut illum, sed porro sunt explicabo blanditiis impedit accusantium, itaque et enim
                     aliquam maiores voluptas?</p>
                 <div class="icons d-flex">
-                    <i class="fa-brands fa-facebook-f"></i>
+                    <div><i class="fa-brands fa-facebook-f"></i></div>
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-linkedin-in"></i>
                     <i class="fa-brands fa-instagram"></i>
@@ -109,12 +109,6 @@ export default {
 </template>
 
 <style scoped>
-.fa-facebook-f:hover {
-    background-color: transparent;
-    color: #13be13;
-    border: none;
-}
-
 .container::before {
     content: "";
     max-width: 1920px;
@@ -171,6 +165,7 @@ export default {
 
         .icons {
             gap: 1rem;
+            z-index: 10;
 
             & i {
                 background-color: transparent;
@@ -179,6 +174,12 @@ export default {
                 padding: 0.6rem;
                 font-size: 1.3rem;
                 line-height: 1.1rem;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #13be13;
+                    border: none;
+                }
             }
 
             .fa-facebook-f {
