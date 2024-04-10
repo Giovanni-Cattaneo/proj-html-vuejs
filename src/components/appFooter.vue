@@ -12,7 +12,7 @@ export default {
                 {
                     id: 1,
                     name: 'Quisque Auctor Movie In Strack',
-                    img: '../../public/assets/2-1.jpg',
+                    img: '../../public/assets/2-1-100x100.jpg',
                     category: 'Coming Soon',
                     details: 'Details',
                     views: 947,
@@ -24,7 +24,7 @@ export default {
                 {
                     id: 2,
                     name: 'New Movie Quinsque In Strack',
-                    img: '../../public/assets/5.jpg',
+                    img: '../../public/assets/5-100x100.jpg',
                     category: 'Latest Movie',
                     details: 'Details',
                     views: 721,
@@ -36,7 +36,7 @@ export default {
                 {
                     id: 3,
                     name: 'Legend of the white wolf',
-                    img: '../../public/assets/3.jpg',
+                    img: '../../public/assets/3-100x100.jpg',
                     category: 'Latest Movie',
                     details: 'Details',
                     views: 721,
@@ -54,7 +54,7 @@ export default {
 <template>
     <div class="container">
         <div class="footer_container">
-            <div class="about">
+            <div class="about d-flex">
                 <h4>About Us</h4>
                 <hr>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ad quaerat, consequatur dignissimos
@@ -62,7 +62,7 @@ export default {
                     aliquam maiores voluptas?</p>
                 <div class="icons"></div>
             </div>
-            <div class="movie_category">
+            <div class="movie_category d-flex">
                 <h4>Movie Category</h4>
                 <hr>
                 <ul>
@@ -74,21 +74,30 @@ export default {
                     <li>Animation New movie</li>
                 </ul>
             </div>
-            <div class="information">
+            <div class="information d-flex">
                 <h4>Information</h4>
                 <hr>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ad quaerat, consequatur dignissimos
-                    atque inventore aut illum, sed porro sunt explicabo blanditiis impedit accusantium, itaque et enim
-                    aliquam maiores voluptas?</p>
-                <div class="icons"></div>
+                <ul>
+                    <li>Youtube Video post</li>
+                    <li>Actor Information</li>
+                    <li>New Promotion</li>
+                    <li>Latest Movie in English</li>
+                    <li>Latest Film Product</li>
+                    <li>Video New video</li>
+                </ul>
             </div>
-            <div class="recent_post">
+            <div class="recent_post d-flex">
                 <h4>Recent Post</h4>
                 <hr>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ad quaerat, consequatur dignissimos
-                    atque inventore aut illum, sed porro sunt explicabo blanditiis impedit accusantium, itaque et enim
-                    aliquam maiores voluptas?</p>
-                <div class="icons"></div>
+
+                <div class="post d-flex" v-for="card in cards">
+                    <img :src="card.img" alt="">
+                    <div class="detail d-flex">
+                        <strong>{{ card.name }}</strong>
+                        <p>{{ card.published }}</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -123,8 +132,17 @@ export default {
         padding-top: 4rem;
         gap: 1.5rem;
 
+        & h4 {
+            margin-bottom: -0.4rem;
+        }
+
         & hr {
             width: 30px;
+        }
+
+        & ul {
+            list-style: none;
+            line-height: 2rem;
         }
 
         .about,
@@ -132,7 +150,18 @@ export default {
         .information,
         .recent_post {
             width: 16%;
+            flex-direction: column;
+            gap: 0.5rem;
         }
+
+        .detail {
+            flex-direction: column;
+            padding-left: 0.5rem;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+
 
     }
 
