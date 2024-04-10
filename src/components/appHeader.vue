@@ -40,10 +40,19 @@ export default {
         </div>
         <div class="nav d-flex">
             <div class="caret d-flex">
-                <span v-for="element in state.navElements">
+                <span class="cycle_element" v-for="element in state.navElements">
                     {{ element.name }}
                     <i class="fa-solid fa-caret-down" v-if="element.caret"></i>
+                    <div class="menu">
+                        <p>Home</p>
+                        <p>Home 2</p>
+                        <p>Home 3</p>
+                        <p>Home 4</p>
+                        <p>Home 5</p>
+                        <p>Home 6</p>
+                    </div>
                 </span>
+
             </div>
             <div class="shop">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -57,6 +66,26 @@ export default {
 </template>
 
 <style scoped>
+.menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: #060f19;
+    padding: 0.5rem 3rem 0.5rem 0.35rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.cycle_element:hover {
+    color: #13be13;
+}
+
+.cycle_element:hover .menu {
+    display: flex;
+    color: white;
+}
+
 .top_header {
     justify-content: space-between;
 
