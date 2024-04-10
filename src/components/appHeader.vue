@@ -5,6 +5,7 @@ import { state } from '../state.js'
 
 export default {
     name: 'appHeader',
+    props: ['navElements'],
     data() {
         return {
             state: state,
@@ -44,7 +45,7 @@ export default {
 
         <div class="nav d-flex">
             <div class="caret d-flex">
-                <div class="cycle_element" v-for="element in state.navElements">
+                <div class="cycle_element" v-for="element in navElements">
                     {{ element.name }}
                     <i class="fa-solid fa-caret-down" v-if="element.caret"></i>
                     <div class="menu">
