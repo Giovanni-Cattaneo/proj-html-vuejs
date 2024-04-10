@@ -18,7 +18,9 @@ export default {
                     details: 'Details',
                     views: 381,
                     rating: '0/10',
-                    active: false
+                    active: false,
+                    genre: 'Drama, Action',
+                    published: 'February 12, 2016',
                 },
                 {
                     id: 2,
@@ -29,6 +31,8 @@ export default {
                     views: 947,
                     rating: '4/10',
                     active: true,
+                    genre: 'Drama, Action',
+                    published: 'February 12, 2016',
                 },
                 {
                     id: 3,
@@ -39,6 +43,8 @@ export default {
                     views: 721,
                     rating: '0/10',
                     active: false,
+                    genre: 'Drama, Action',
+                    published: 'February 12, 2016',
                 },
             ]
         }
@@ -95,12 +101,20 @@ export default {
     <div class="card_container d-flex">
         <div class="card" :class="{ activeCard: card.active }" v-for="card in cards" :key="card.name">
             <img :src="card.img" alt="">
+            <div class="card_overlay"></div>
             <div class="card_detail">
                 <span class="card_rating"> <i class="fa-solid fa-star"></i> {{ card.rating }}</span>
                 <h3 class="card_title">{{ card.name }}</h3>
                 <p class="card_category">Category: {{ card.category }}</p>
                 <span class="card_details">{{ card.details }}</span>
                 <span class="card_views">{{ card.views }} Views</span>
+                <span class="play"><i class="fa-solid fa-play"></i></span>
+                <div class="information_hover">
+                    <h3>{{ card.name }}</h3>
+                    <p>Category: {{ card.category }}</p>
+                    <p>Release: {{ card.published }}</p>
+                    <p>Genres: {{ card.genre }} </p>
+                </div>
             </div>
         </div>
     </div>
@@ -110,6 +124,57 @@ export default {
 </template>
 
 <style scoped>
+.information_hover {
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+    display: none;
+}
+
+.play {
+    position: absolute;
+    top: 13rem;
+    display: none;
+    right: 9.5rem;
+    font-size: 2rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0 0.7rem;
+}
+
+.activeCard .play {
+    top: 16rem;
+    right: 12rem;
+}
+
+.card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(19, 190, 19, 0.3) 0%, rgba(19, 190, 19, 0.6) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 1rem;
+}
+
+.card:hover .card_title,
+.card:hover .card_category {
+    display: none;
+}
+
+.card:hover .card_overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.card:hover .information_hover,
+.card:hover .play {
+    display: block;
+}
+
 .card_section {
     margin-top: 3rem;
 
